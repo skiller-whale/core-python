@@ -85,7 +85,7 @@ DEFAULT ARGUMENT VALUES
    called `compare_names`, which expects the parameters:
 
     * `names`, which is a list of names.
-    * `popularity_by_year` which has the default value of `girls_names_2010`
+    * `popularity_by_year` which has the default value of `girls_popularity_by_decade`
     * `year` which has the default value of `2010`
 
    This function should loop through names, and call `print_number_of_names`
