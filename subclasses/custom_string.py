@@ -6,8 +6,6 @@
   - `False` otherwise.
 
   You can use s[::-1] to reverse the string s.
-
-* Uncomment all the lines of code at the bottom of this section.
 """
 
 
