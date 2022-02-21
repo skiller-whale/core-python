@@ -118,7 +118,7 @@ name = 'dom'
 fallback_name = 'dominic'
 
 # print()
-# print(f"Number of boys called {name}:")
+# print("Number of boys called", name, "(or", fallback_name, "if none):")
 
 # print(boys_names_2010[name])
 
@@ -202,7 +202,7 @@ popularity_change = {}
 # Write code here which iterates through girls_names_2010.items(), and adds
 # each name as a key to change_in_popularity. The corresponding value should be
 # the difference between the number of girls given the name in 2010 and the
-# number given the name in 1960 (from girls_names_2010).
+# number given the name in 1960 (from girls_names_1960).
 #
 # So if there were 47 girls called hilda in 2010, and 458 in 1960, then the
 # popularity_change['hilda'] should equal 411  (47 - 458)
