@@ -92,10 +92,10 @@ DEFAULT ARGUMENT VALUES
    for each one.
 
    Use this new compare_names function to compare the popularity of the
-   spellings of 'catherine'. You will need to use the names list defined below:
+   spellings of 'catherine'. You will need to use the spellings list defined below:
 """
 
-names = ['catherine', 'kathryn', 'katharine', 'katherine']
+spellings = ['catherine', 'kathryn', 'katharine', 'katherine']
 
 # <<< YOUR CODE HERE >>>
 
