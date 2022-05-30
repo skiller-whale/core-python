@@ -48,45 +48,7 @@ print("Attributes are:", profile_attributes)
 
 
 """
-2. SIMILARITIES WITH LISTS
---------------------------
-
-Uncomment the print statements at the bottom of this section.
-
-Update the function `dict_from_tuple` so that it takes a tuple, `attributes`
-containing `(occupation, age, gender, favourite_shop)`, and returns a
-dictionary containing this information.
-
-Example usage:
-
-        >>> attributes = ('Brine surgeon', '30-40', 'F', 'Clamazon')
-        >>> dict_from_tuple(attributes)
-
-        {
-            'occupation': 'Brine surgeon',
-            'age': '30-40',
-            'gender': 'F',
-            'favourite_shop': 'Clamazon',
-        }
-"""
-
-
-def dict_from_tuple(attributes):
-    # TODO complete this function.
-    pass
-
-
-# <<< DO NOT CHANGE THE LINES BELOW HERE (except to uncomment) >>>
-
-test_attributes = ('Swimmigration officer', '30-40', 'F', 'John Lewfish')
-
-# print()
-# print("Dictionary of attributes:")
-# pprint(dict_from_tuple(test_attributes))
-
-
-"""
-3. TUPLES AS KEYS
+2. TUPLES AS KEYS
 -----------------
 
 Uncomment the three lines of code at the bottom of this section.
@@ -94,7 +56,7 @@ Uncomment the three lines of code at the bottom of this section.
 The variable `all_profiles` is a large list containing customer profile dicts
 (like the ones you have seen in earlier exercises).
 
-Update the function `get_largest_segment` so that returns:
+Update the function `get_largest_segment` so that it returns:
 
 1. The most common profile in terms of (occupation, age, gender, favourite_shop).
 2. The number of customers with that profile.
@@ -114,6 +76,20 @@ For example:
 You can (should) use the functions `tuple_from_profile`, `dict_from_tuple` and
 `largest_value_and_key` to help you.
 """
+
+
+# This function is the reverse of the one you wrote in exercise 1.
+# You do not need to change it.
+def dict_from_tuple(attributes):
+    """Create a dictionary from a given tuple"""
+    occupation, age, gender, favourite_shop = attributes
+    return {
+        'occupation': occupation,
+        'age': age,
+        'gender': gender,
+        'favourite_shop': favourite_shop,
+    }
+
 
 # This function is provided to help you - you do not need to change it.
 def largest_value_and_key(d):
