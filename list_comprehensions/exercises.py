@@ -6,12 +6,11 @@ from example_data import word_list
 MAPPING VALUES
 --------------
 
-For this section you will use a list of words, `word_list`, and perform some
-transformations on this list using list comprehensions
+For these exercises you will use a list of words, `word_list`, and perform some
+transformations on this list using list comprehensions.
 
-If you wish to look at the words list, then you can uncomment the
+If you wish to look at the words list, you can uncomment the
 `print(word_list)` line to see it in the output.
-
 
 At the moment, several new lists are created from `word_list` using `for` loops:
 
@@ -35,7 +34,7 @@ check that your result is the same.
 
 # word list looks like: ['ability', 'able', 'above', 'abstract', ... , 'zone']
 # This print line is just to display word_list, feel free leave it commented.
-print(word_list)
+# print(word_list)
 
 
 # Get a list of the lengths of all of the words: [7, 4, 5, 8, ... , 4]
@@ -91,7 +90,7 @@ number of vowels in each word in `word_list`.
 2. Replace the ellipsis `...` with a list comprehension which results in
    `number_of_vowels` being equal to `number_of_vowels_from_loop`
 
-Note: You may well need to write a separate function (e.g. `count_vowels`)
+Note: You may need to write a separate function (e.g. `count_vowels`)
 to use in the list comprehension.
 """
 
@@ -116,59 +115,6 @@ number_of_vowels = ...
 # assert number_of_vowels_from_loop == number_of_vowels, \
 #     "number_of_vowels does not match number_of_vowels_from_loop"
 # print("number_of_vowels list comprehension is correct!")
-
-
-"""
-SCOPING OF ITERATION VARIABLES
-------------------------------
-
-The code below takes a variable, `word`, and finds the number of words in
-`word_list` which start with the same letter. To do this, it iterates through
-word_list, and creates a new list where each element is `True` or `False`.
-
-However, there is a bug in the code which you
-can fix by using a list comprehension instead (there are other ways to fix the
-bug, but try to do it using a list comprehension).
-
-1. Uncomment the print and assert statements at the bottom of the section. If
-   you run the script now you should see some unexpected output.
-2. This is being caused by the iteration variable, `word`, in the for loop.
-   Replace the for loop with the line:
-
-   `starts_with_same_letter = [word[0] == first_letter for word in word_list]`
-
-   Note: Make sure you actually replace the `for` loop (or comment it out). If
-   you just add the list comprehension below then you'll still get the error.
-3. Run your script again. You should now see that the variable `word` is still
-   equal to its starting value, even though the list comprehension is doing the
-   same operations as the for loop
-"""
-
-# Define a variable, `word` which our program will use later
-# (if you're interested, bombinate means "to make a humming or buzzing noise")
-word = "bombinate"
-first_letter = word[0]
-
-# <<< CHANGE THE CODE BELOW HERE  >>>
-
-# Create a list of booleans where each item is `True` if the corresponding word
-# in word_list starts with same letter as `word`, and `False` otherwise
-starts_with_same_letter = []
-for word in word_list:
-    starts_with_same_letter.append(word[0] == first_letter)
-
-# <<< DO NOT CHANGE THE LINES BELOW HERE (except to uncomment) >>>
-
-# Note: You can use the `sum` function on a list of numbers or booleans. True is
-# treated as 1, and False as 0, so e.g. `sum([True, True, False, True]) == 3`
-count_with_same_letter = sum(starts_with_same_letter)
-
-# print()
-# print("My favourite word is", word)
-# print("It starts with the letter", first_letter)
-# print(count_with_same_letter, "words in word_list start with the same letter")
-# assert word == "bombinate", \
-#     "Oops... You've overwritten 'bombinate' with '" + word + "'!"
 
 """
 THE TERNARY OPERATOR
@@ -241,7 +187,7 @@ NOTE: A string can be reversed using slicing:
     ... 'olleh'
 
 Uncomment the print statements, and make sure that your script runs successfully
-and that the result looks plausible
+and that the result looks plausible.
 
 """
 
