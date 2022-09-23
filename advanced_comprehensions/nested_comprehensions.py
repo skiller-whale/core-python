@@ -190,7 +190,7 @@ For example:
 """
 
 # Use `words_by_letter` to create first_ten_words_by_letter
-first_ten_words_by_letter = ...
+first_ten_words_by_letter = [...]
 
 # <<< DO NOT CHANGE THE LINES BELOW HERE (except to uncomment) >>>
 
