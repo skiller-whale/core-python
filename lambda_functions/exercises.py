@@ -37,7 +37,8 @@ def display_time():
 
   * long_names: should be a list including all boys_names with more than 10 letters.
   * begins_with_x: should be a list of all boys_names that begin with x
-  * shortest_name: should be the shortest name (or joint shortest) in the boys_names list.
+  * shortest_name: should be the shortest name (or one of the shortest, in case multiple names have the same length) 
+    in the boys_names list.
 
 2. Change the `if False` to `if True` near the bottom of this section to check
    your output looks right.
@@ -54,7 +55,7 @@ def begins_with_x(name):
 
 long_names = ...     # TODO: Make this a list of names > 10 letter long
 x_names = ...        # TODO: Make this a list of all names starting with X
-shortest_name = ...  # TODO: Make this the (joint) shortest name
+shortest_name = ...  # TODO: Make this the shortest name
 
 
 # TODO: Change this False to True
@@ -89,7 +90,7 @@ if False:
 
 
 
-# TODO: This should be the (joint) longest name
+# TODO: This should be the longest name
 longest_name = ...
 
 # TODO: This should be a list of all names starting with 'Q'
