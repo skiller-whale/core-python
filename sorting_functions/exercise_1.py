@@ -27,3 +27,8 @@ reverse_sorted_words = ...
 print()
 print("The last words are: ")
 print_rainbow(reverse_sorted_words)
+
+# * Uncomment the assert statements to check your answers.
+# # <<< DO NOT CHANGE THE LINES BELOW HERE (except to uncomment) >>>
+# assert sorted_words[:4] == ['a', 'aa', 'aaa', 'aaron'], \
+#     f"Wrong first four sorted_words, {sorted_words[:4]}, should be ['a', 'aa', 'aaa', 'aaron']"
