@@ -3,7 +3,7 @@ from utils.utils import is_anagram
 
 # pylint: disable=pointless-string-statement
 """
-ENUMERATE
+ENUMERATE, PART 1
 ---------
 
 The code below iterates through all the words in `words`, finds anagrams
@@ -38,7 +38,8 @@ ENUMERATE, PART 2
 
 word_id_dict = {}
 
+# # <<< DO NOT CHANGE THE LINES BELOW HERE (except to uncomment) >>>
 # assert word_id_dict['killer'] == 6929, \
 #     f"Id for 'killer' incorrect, it's {word_id_dict['killer']}, should be 6929."
 # assert word_id_dict['whale'] == 4954, \
-#     f"Id for 'killer' incorrect, it's {word_id_dict['whale']}, should be 4954."
+#     f"Id for 'whale' incorrect, it's {word_id_dict['whale']}, should be 4954."
