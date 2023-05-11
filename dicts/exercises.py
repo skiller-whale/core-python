@@ -82,7 +82,7 @@ TESTING FOR MISSING KEYS
 ------------------------
 
 * Uncomment the print statements in this section, and run the script. You should
-  see a KeyError, because no girls were named 'whale' (surprisingly...)
+  see a KeyError, because no girls were named 'orca' (surprisingly...)
 
 * Add a conditional (if-else statement) so that if test_name is not a key in
   girls_names_2010, the code will print "There were 0 girls named <test_name>"
@@ -91,7 +91,7 @@ TESTING FOR MISSING KEYS
   many girls were born with that name.
 """
 
-test_name = 'orca'
+test_name = "orca"
 
 # print()
 # print("There were", girls_names_2010[test_name], "girls named", test_name)
@@ -114,8 +114,8 @@ FETCHING VALUES WITH GET
   * IF there are no boys with either name, it will print the number 0.
 """
 
-name = 'dom'
-fallback_name = 'dominic'
+name = "dom"
+fallback_name = "dominic"
 
 # print()
 # print("Number of boys called", name, "(or", fallback_name, "if none):")
@@ -142,7 +142,7 @@ ITERATING THROUGH A DICT
 """
 
 names_per_letter = {}  # Initialize an empty dictionary
-                       # you'll update this to include the count for each letter
+# you'll update this to include the count for each letter
 
 # <<< YOUR CODE HERE >>>
 
@@ -237,12 +237,10 @@ This section uses the variable `boys_popularity_by_decade`, which looks like thi
 * Add some code that will print out the number of boys called 'Ethan' each decade.
   Your output should look something like the below, but with the correct numbers:
 
-```
   In 1960 there were 1000 boys born named Ethan
   In 1970 there were 1000 boys born named Ethan
   In 1980 there were 1000 boys born named Ethan
   ...
-```
 """
 
 # print()
