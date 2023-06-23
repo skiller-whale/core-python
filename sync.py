@@ -186,6 +186,6 @@ def skiller_whale_sync():
 
 
 if __name__ == "__main__":
-    if sys.version_info.major < 3 or (sys.version_info.major == 3 and sys.version_info.minor < 6):
-        raise Exception("Skiller Whale requires Python 3.6 or Higher")
+    if sys.version_info.major < 3 or (sys.version_info.major == 3 and sys.version_info.minor < 8):
+        raise Exception("Skiller Whale requires Python 3.8 or Higher")
     skiller_whale_sync()
