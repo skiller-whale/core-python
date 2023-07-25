@@ -1,0 +1,23 @@
+version: '3.8'
+services:
+  python:
+    profiles: ["python"] # exclude from "docker-compose up"
+    build: .
+    command: /bin/sh -c 'cd /app/exercises; exec /bin/bash'
+    volumes:
+      - ./exercises:/app/exercises
+      - ./attendance_id:/app/sync/attendance_id
+  sync:
+    image: "ghcr.io/skiller-whale/learnersync"
+    network_mode: "host"
+    environment:
+      SERVER_URL: https://train.skillerwhale.com
+      WATCHER_BASE_PATH: "/app"
+      ATTENDANCE_ID_FILE: "/app/sync/attendance_id"
+      WATCHED_EXTS: "py"
+      IGNORE_DIRS: ".git"
+    volumes:
+      - ./exercises:/app/exercises
+      - ./attendance_id:/app/sync/attendance_id
+    tty: true
+    stdin_open: true
