@@ -7,10 +7,12 @@ EXERCISE 4: WITNESSES
 
 In this exercise you will retrieve some whale data using `fake_requests.get`.
 
-There's an example call to `fake_requests.get` below. It returns a response object,
-    which has two attributes:
+The convenience function `request_whale_info` can be used to obtain information
+    about a whale type. It returns a `Response` object with the following attributes:
     - `response.status_code`: `200` or `404`
-    - `response.content`: dictionary if `status_code` is 200 - { 'num_sightings': int }
+    - `response.content`: a dictionary
+        - { 'num_sightings': int } if `response.status_code == 200`
+        - { 'error': str } if `response.status_code == 404`
 
     * Use a single call to `any` to find whether there is a whale
         with fewer than `25` sightings.
@@ -40,9 +42,16 @@ WHALE_TYPES = [
     'gray'
 ]
 
-# Example call to `fake_requests.get`
-response = fake_requests.get(BASE_URL.format('beluga'))
-print(f'Beluga response: ({response.status_code}, {response.content})')
+
+def request_whale_info(whale_type):
+    """Convenience function to send a request for whale info."""
+    url = BASE_URL.format(whale_type)
+    return fake_requests.get(url)
+
+
+# Example call to `request_whale_info.get`
+response = request_whale_info('beluga')
+print(f'Beluga response: ({response})')
 
 # * Use a single call to `any` to find whether there is a whale
 #     with fewer than `25` sightings.
