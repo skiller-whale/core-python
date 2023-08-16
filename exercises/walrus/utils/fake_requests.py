@@ -25,7 +25,7 @@ class Response:
         Returns:
             str: A string representation of the Response object.
         """
-        return f'<Response [{self.status_code}]>'
+        return f'Response(status_code={self.status_code}, content={self.content})'
 
 
 def get(url):
@@ -49,6 +49,6 @@ def get(url):
             )
 
     return Response(
-        content=f'No such whale type ({whale_type}).',
+        content={'error': f'No such whale type ({whale_type}).'},
         status_code=404
     )
