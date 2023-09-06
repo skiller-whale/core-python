@@ -2,21 +2,21 @@
 BOOLEAN OPERATORS
 -------------------
 """
-def light_on(upstairs_up, downstairs_up):
+def light_on(upstairs_on, downstairs_on):
 
     # TODO: edit only this line of code
-    on = upstairs_up or downstairs_up
+    on = upstairs_on or downstairs_on
 
     return on
 
 
 # print("")
-# print("Light switch positions          | Light on");
-# print("--------------------------------+---------");
-# print("Upstairs Up,   Downstairs Up    | ", light_on(True, True));
-# print("Upstairs Up,   Downstairs Down  | ", light_on(True, False));
-# print("Upstairs Down, Downstairs Up    | ", light_on(False, True));
-# print("Upstairs Down, Downstairs Down  | ", light_on(False, False));
+# print("Light switch positions          | Light on")
+# print("--------------------------------+---------")
+# print("Upstairs On, Downstairs On\t| ", light_on(True, True))
+# print("Upstairs On, Downstairs Off\t| ", light_on(True, False))
+# print("Upstairs Off, Downstairs On\t| ", light_on(False, True))
+# print("Upstairs Off, Downstairs Off\t| ", light_on(False, False))
 
 """
 IF BLOCKS
