@@ -56,7 +56,7 @@ POSITIONAL AND KEYWORD ARGUMENTS
    You should see a TypeError.
 
    If you aren't sure, or can't work out why this TypeError happens, ask the
-   trainer for an explanation.
+   coach for an explanation.
 
 2. Without rearranging any arguments, add as few keywords as possible to
    the function calls below, so that the calls succeed.
