@@ -42,6 +42,8 @@ def display_time():
 
 2. Change the `if False` to `if True` near the bottom of this section to check
    your output looks right.
+
+3. [OPTIONAL] use `map` along with the `str.upper` function to convert all the values in `long_names` into capital letters.
 """
 
 def longer_than_ten(name):
@@ -77,10 +79,10 @@ if False:
 3. LAMBDA FUNCTIONS
 -------------------
 
-1. Use run_n_times with a lambda expression to print out "Hi There" 4 times.
+1. Use run_n_times with a lambda expression to print out "Hi There" 5 times.
 
 2. Now, use lambda functions where appropriate to calculate the three new
-   variables below (longest_name, q_names, and palindromic_names).
+   variables below (q_names, palindromic_names, and longest_name_starting_with_k).
 
 3. Change the `if False` near the bottom of this section to `if True` to check
    your output.
@@ -90,21 +92,19 @@ if False:
 
 
 
-# TODO: This should be the longest name
-longest_name = ...
-
 # TODO: This should be a list of all names starting with 'Q'
 q_names = ...
 
-# TODO: This should be this the list of all names that are the same forwards
-# and backwards, ignoring capitalisation (s[::-1] will reverse the string s)
+# TODO: This should be the list of all names that are the same forwards
+# and backwards, where capitalisation doesn't matter, i.e. we consider
+# "Bab" to be a palindrome (s[::-1] will reverse the string s)
 palindromic_names = ...
+
+# TODO: This should be the longest name that starts with K
+longest_name_starting_with_k = ...
 
 # TODO: Change this False to True to check your results
 if False:
-    print("\nThe Longest Name is:")
-    print("*", longest_name)
-
     print("\nQ Names:")
     for name in q_names:
         print("*", name)
@@ -113,3 +113,6 @@ if False:
     for name in palindromic_names:
         print("*", name)
     print()
+
+    print("\nThe Longest Name starting with k is:")
+    print("*", longest_name_starting_with_k)
