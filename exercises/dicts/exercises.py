@@ -205,7 +205,7 @@ popularity_change = {}
 # number given the name in 1960 (from girls_names_1960).
 #
 # So if there were 47 girls called hilda in 2010, and 458 in 1960, then the
-# popularity_change['hilda'] should equal 411  (47 - 458)
+# popularity_change['hilda'] should equal -411  (47 - 458)
 
 # <<< YOUR CODE HERE >>>
 
