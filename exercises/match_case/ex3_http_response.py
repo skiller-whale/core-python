@@ -22,14 +22,16 @@ HINT: The `assert` statements at the bottom of this file will contain the expect
     output as well.
 """
 
+
 class Response:
     """An HTTP Response mock class."""
+
     def __init__(self, status_code, content):
         self.status_code = status_code
         self.content = content
 
     def __str__(self) -> str:
-        return f'{self.status_code}, {self.content}'
+        return f"{self.status_code}, {self.content}"
 
 
 def process_response(response: Response):
@@ -37,27 +39,33 @@ def process_response(response: Response):
     # TODO: Implement `process_response`
 
 
-if __name__ == '__main__':
-    bad_user = Response(401, {'error': 'bad_user'})
-    bad_pass = Response(403, {'error': 'bad_password'})
-    other_err = Response(401, {'error': 'unauthorized'})
-    success = Response(200, 'Login successful.')
-    timeout = Response(504, 'gateway timeout')
+if __name__ == "__main__":
+    bad_user = Response(401, {"error": "bad_user"})
+    bad_pass = Response(403, {"error": "bad_password"})
+    other_err = Response(401, {"error": "unauthorized"})
+    unknown_content = Response(401, {"message": "retry"})
+    success = Response(200, "Login successful.")
+    timeout = Response(504, "gateway timeout")
 
-    assert (resp := process_response(bad_user)) == 'Bad username/password combination.', (
-        f'wrong output for {bad_user} - {resp}'
-    )
-    assert (resp := process_response(bad_pass)) == 'Bad username/password combination.', (
-        f'wrong output for {bad_pass} - {resp}'
-    )
-    assert (resp := process_response(other_err)) == 'Unknown error - unauthorized.', (
-        f'wrong output for {other_err} - {resp}'
-    )
-    assert (resp := process_response(success)) == success.content, (
-        f'wrong output for {success} - {resp}'
-    )
-    assert (resp := process_response(timeout)) == f'Can not process content {timeout.content}.', (
-        f'wrong output for {timeout} - {resp}'
+    assert (
+        resp := process_response(bad_user)
+    ) == "Bad username/password combination.", f"wrong output for {bad_user} - {resp}"
+    assert (
+        resp := process_response(bad_pass)
+    ) == "Bad username/password combination.", f"wrong output for {bad_pass} - {resp}"
+    assert (
+        resp := process_response(other_err)
+    ) == "Unknown error - unauthorized.", f"wrong output for {other_err} - {resp}"
+    assert (
+        resp := process_response(unknown_content)
+    ) == f"Can not process content.", f"wrong output for {unknown_content} - {resp}"
+    assert (
+        resp := process_response(success)
+    ) == success.content, f"wrong output for {success} - {resp}"
+    assert (
+        resp := process_response(timeout)
+    ) == f"Can not process content {timeout.content}.", (
+        f"wrong output for {timeout} - {resp}"
     )
 
-    print('process_response works as expected.')
+    print("process_response works as expected.")
