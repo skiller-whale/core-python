@@ -1,9 +1,8 @@
 version: '3.8'
 services:
-  python:
-    profiles: ["python"] # exclude from "docker-compose up"
+  exercises:
+    profiles: ["exercises"] # exclude from "docker-compose up"
     build: .
-    command: /bin/sh -c 'cd /app/exercises; exec /bin/bash'
     volumes:
       - ./exercises:/app/exercises
       - ./attendance_id:/app/sync/attendance_id
