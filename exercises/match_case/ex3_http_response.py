@@ -43,6 +43,9 @@ if __name__ == '__main__':
     other_err = Response(401, {'error': 'unauthorized'})
     success = Response(200, 'Login successful.')
     timeout = Response(504, 'gateway timeout')
+    unknown_content = Response(
+        401, '<Error><Message>Unknown error, please retry.</Message></Error>'
+    )
 
     assert (resp := process_response(bad_user)) == 'Bad username/password combination.', (
         f'wrong output for {bad_user} - {resp}'
@@ -58,6 +61,10 @@ if __name__ == '__main__':
     )
     assert (resp := process_response(timeout)) == f'Can not process content {timeout.content}.', (
         f'wrong output for {timeout} - {resp}'
+    )
+    assert (resp := process_response(unknown_content)) == \
+          f'Can not process content {unknown_content.content}.', (
+        f"wrong output for {unknown_content} - {resp}"
     )
 
     print('process_response works as expected.')
