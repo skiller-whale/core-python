@@ -200,7 +200,7 @@ ITERATING THROUGH DICT ITEMS
 popularity_change = {}
 
 # Write code here which iterates through girls_names_2010.items(), and adds
-# each name as a key to change_in_popularity. The corresponding value should be
+# each name as a key to popularity_change. The corresponding value should be
 # the difference between the number of girls given the name in 2010 and the
 # number given the name in 1960 (from girls_names_1960).
 #
