@@ -48,65 +48,108 @@ print("Attributes are:", profile_attributes)
 
 
 """
-2. TUPLES AS KEYS
------------------
+2. TUPLES AS KEYS - PART 1
+--------------------------
 
-Uncomment the three lines of code at the bottom of this section.
+The imported variable `all_profiles` is a large list containing customer profile
+dicts (like the ones you've seen in earlier exercises).
 
-The variable `all_profiles` is a large list containing customer profile dicts
-(like the ones you have seen in earlier exercises).
+Implement the function `count_profiles` which takes a list of profiles and
+returns a dictionary where:
 
-Update the function `get_largest_segment` so that it returns:
+* the keys are profile tuples containing: (occupation, age, gender, favourite_shop)
+* the values are the number of times that profile type appears in the list.
+
+You should use the `tuple_from_profile` that you wrote in the previous exercise.
+
+For example:
+
+>>> count_profiles([
+    {'occupation': 'Pilot whale', 'age': '30-40', 'gender': 'F', 'favourite_shop': 'John Lewfish', 'name': 'Sharkira'},
+    {'occupation': 'Eelectrician', 'age': '10-20', 'gender': 'M', 'favourite_shop': 'Surfways', 'name': 'Eelton John'},
+    {'occupation': 'Pilot whale', 'age': '30-40', 'gender': 'F', 'favourite_shop': 'John Lewfish', 'name': 'Tuna Turner'},
+])
+
+Should return:
+
+{
+    ('Pilot whale', '30-40', 'F', 'John Lewfish'): 2,
+    ('Eelectrician', '10-20', 'M', 'Surfways'): 1,
+}
+
+Uncomment the lines of code at the end of this section and test your function.
+There should be 8 profiles like ('Whaleway engineer', '50-65', 'F', 'Clamazon')
+"""
+
+def count_profiles(profiles):
+    counts = {}
+
+    # TODO: complete this function
+
+    return counts
+
+
+# You can use the following to test your implementation (see above for expected output).
+# test_counts = count_profiles([
+#     {'occupation': 'Pilot whale', 'age': '30-40', 'gender': 'F', 'favourite_shop': 'John Lewfish', 'name': 'Sharkira'},
+#     {'occupation': 'Eelectrician', 'age': '10-20', 'gender': 'M', 'favourite_shop': 'Surfways', 'name': 'Eelton John'},
+#     {'occupation': 'Pilot whale', 'age': '30-40', 'gender': 'F', 'favourite_shop': 'John Lewfish', 'name': 'Tuna Turner'},
+# ])
+# print('\n[test] Test `count_profiles`:', test_counts)
+
+
+# Uncomment when you're done and put these results in your answerbox.
+# profile_counts = count_profiles(all_profiles)
+# print("\nNumber of Distinct Profiles:", len(profile_counts))
+# test_profile = ('Whaleway engineer', '50-65', 'F', 'Clamazon')
+# print(f"Profile {test_profile} occurs {profile_counts.get(test_profile, 0)} times")
+
+
+"""
+2. TUPLES AS KEYS - PART 2
+--------------------------
+
+Update the function `get_most_common_profile` so that it returns two arguments:
 
 1. The most common profile in terms of (occupation, age, gender, favourite_shop).
 2. The number of customers with that profile.
 
 For example:
 
-  >>> get_largest_segment([
-      {'occupation': 'Pilot whale', 'age': '30-40', 'gender': 'F', 'favourite_shop': 'John Lewfish'},
-      {'occupation': 'Eelectrician', 'age': '10-20', 'gender': 'F', 'favourite_shop': 'Surfways'},
-      {'occupation': 'Pilot whale', 'age': '30-40', 'gender': 'F', 'favourite_shop': 'John Lewfish'},
-  ])
+>>> get_most_common_profile([
+    {'occupation': 'Pilot whale', 'age': '30-40', 'gender': 'F', 'favourite_shop': 'John Lewfish', 'name': 'Sharkira'},
+    {'occupation': 'Eelectrician', 'age': '10-20', 'gender': 'M', 'favourite_shop': 'Surfways', 'name': 'Eelton John'},
+    {'occupation': 'Pilot whale', 'age': '30-40', 'gender': 'F', 'favourite_shop': 'John Lewfish', 'name': 'Tuna Turner'},
+])
 
-  Should return:
+Should return:
 
-  {'occupation': 'Pilot whale', 'age': '30-40', 'gender', 'F', 'favourite_shop': 'John Lewfish'}, 2
+('Pilot whale', '30-40', 'F', 'John Lewfish'), 2
 
-You can (should) use the functions `tuple_from_profile`, `dict_from_tuple` and
-`largest_value_and_key` to help you.
+You should use the `count_profiles` function you wrote, and the provided
+`item_with_largest_value` function to help you.
+
+Uncomment the three lines of code at the bottom to test your functions
 """
 
 
-# This function is the reverse of the one you wrote in exercise 1.
-# You do not need to change it.
-def dict_from_tuple(attributes):
-    """Create a dictionary from a given tuple"""
-    occupation, age, gender, favourite_shop = attributes
-    return {
-        'occupation': occupation,
-        'age': age,
-        'gender': gender,
-        'favourite_shop': favourite_shop,
-    }
-
-
 # This function is provided to help you - you do not need to change it.
-def largest_value_and_key(d):
-    """Return the largest value in dict `d`, and its key (inefficient implementation)"""
+# Note - this is not a particularly efficient implementation, but it is simple.
+def item_with_largest_value(d):
+    """Return the (key, value) pair corresponding to the largest value in dict `d`"""
     max_value = max(d.values())
     for key, value in d.items():
         if value == max_value:
-            return value, key
+            return key, value
 
 
-def get_largest_segment(profiles):
+def get_most_common_profile(profiles):
     # TODO: complete this function
     pass
 
 
 # <<< DO NOT CHANGE THE CODE BELOW THIS LINE (except to uncomment) >>>
 
-# largest_segment, frequency = get_largest_segment(all_profiles)
+# most_common_profile, frequency = get_most_common_profile(all_profiles)
 # print('\nMost common profile occurs', frequency, 'times:')
-# pprint(largest_segment)
+# pprint(most_common_profile)

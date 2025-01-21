@@ -15,7 +15,7 @@ services:
       WATCHER_BASE_PATH: "/app"
       ATTENDANCE_ID_FILE: "/app/sync/attendance_id"
       WATCHED_EXTS: ".py"
-      IGNORE_DIRS: ".git"
+      IGNORE_MATCH: ".git"
     volumes:
       - ./exercises:/app/exercises
       - ./attendance_id:/app/sync/attendance_id
