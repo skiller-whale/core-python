@@ -13,13 +13,13 @@ The code below transforms a dataset of profiles that looks like:
     ]
 
 to a dataset of the number of favourite shops by occupation that looks like:
-    [
+    {
         'occupation_1': {
             'shop_1': int,
             'shop_2': int,
             ...
         }
-    ]
+    }
 
 where the `int`s are the total number of profiles with each shop in `favourite_shop`.
 
