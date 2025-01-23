@@ -5,8 +5,7 @@ from pprint import pprint
 from example_data import (
     girls_names_2010,
     boys_names_2010,
-    girls_names_1960,
-    boys_popularity_by_decade,
+    girls_names_1960
 )
 
 # ------------------------------------------------------------------------------
@@ -212,43 +211,3 @@ popularity_change = {}
 # print()
 # print("The popularity of Maureen has changed by", popularity_change.get('maureen', 0))
 # print("The popularity of Madison has changed by", popularity_change.get('madison', 0))
-
-"""
-NESTED DICTS
-------------
-
-This section uses the variable `boys_popularity_by_decade`, which looks like this:
-
-    {
-        1960: {'david': 85931, 'michael': 84206, 'james': 7687, ...},
-        1970: {'henry': 15261, 'tim': 1821, ...},
-        ...
-    }
-
-* Uncomment the `print` statements. Run the script and make sure you see:
-
-  In 1970, there were ? boys born named Uriel
-
-* Replace the `?` with an expression that will return the number of boys named
-  Uriel born in 1970, and run the script again. The last line of output should read:
-
-  In 1970, there were 31 boys born named Uriel
-
-* Add some code that will print out the number of boys called 'Ethan' each decade.
-  Your output should look something like the below, but with the correct numbers:
-
-  In 1960 there were 1000 boys born named Ethan
-  In 1970 there were 1000 boys born named Ethan
-  In 1980 there were 1000 boys born named Ethan
-  ...
-"""
-
-# print()
-# print("In 1970, there were", "?", "boys born named Uriel")
-
-# Add code to print the number of baby boys born called Ethan each decade e.g.
-# "In 1960 there were 1000 boys born named Ethan"
-# "In 1970 there were 1000 boys born named Ethan"
-# etc.
-
-# <<< YOUR CODE HERE >>>
