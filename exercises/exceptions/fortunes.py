@@ -53,10 +53,14 @@ def ask_for_birthday():
     return datetime.date(year=year, month=month, day=day)
 
 
+class UnsupportedDateError(ValueError):
+    pass
+
+
 def tell_fortune(date):
     """Expects a datetime.date input"""
     if date.year < 1000:
-        raise ValueError("Millenium Bug! Fortunes only available after 1000AD")
+        raise UnsupportedDateError("Millenium Bug! Fortunes only available after 1000AD")
     day_of_the_week = date.weekday()
     print("You were born on a", DAY_NAMES[day_of_the_week])
     print("You", FORTUNES[day_of_the_week])
