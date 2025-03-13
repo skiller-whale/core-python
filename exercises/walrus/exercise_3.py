@@ -20,9 +20,6 @@ Currently a for loop is used to extract the number of sightings of whale types.
 
     * Once done, think about whether using `:=` improved your code.
         * What are the pros/cons of using `:=` here?
-
-[EXTENSION]
-    * Improve the `assert` statements using `:=`.
 """
 
 BASE_URL = 'https://skiller-whale.com/whales/{0}'
