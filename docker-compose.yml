@@ -1,4 +1,3 @@
-version: '3.8'
 services:
   exercises:
     profiles: ["exercises"] # exclude from "docker-compose up"
