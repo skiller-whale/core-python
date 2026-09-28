@@ -1,18 +1,20 @@
 """An introduction to reading and writing files"""
 
-import os
 from collections import Counter
+from pathlib import Path
 
 
 # Don't worry about this bit for now. The code below gets the absolute path to
-# the file you'll need to load, using whichever of '\' or '/' your system uses.
+# the file you'll need to load. `Path` objects provide useful methods for
+# working with files, and `/` joins paths using the right separator for your
+# system.
 
 # If you run the Python script from the directory containing `users_log.txt`
 # then it would be enough to just set `log_file_path = 'users_log.txt'`
 
-this_file_path = os.path.abspath(__file__)  # e.g. /Users/me/core-python/reading_and_writing_files/reading_and_writing_files.py
-file_dir = os.path.dirname(this_file_path)  # e.g. /Users/me/core-python/reading_and_writing_files/
-log_file_path = os.path.join(file_dir, 'users_log.txt')  # e.g. /Users/me/core-python/reading_and_writing_files/users_log.txt
+this_file_path = Path(__file__).resolve()  # e.g. /Users/me/core-python/reading_and_writing_files/exercises.py
+file_dir = this_file_path.parent  # e.g. /Users/me/core-python/reading_and_writing_files/
+log_file_path = file_dir / 'users_log.txt'  # e.g. /Users/me/core-python/reading_and_writing_files/users_log.txt
 
 print("Log file located at:", log_file_path)
 
@@ -107,7 +109,7 @@ is already written out below, with the results placed in the variable
 # print(top_20_users)
 
 # # Create the path that the new file will be saved to
-# frequent_users_path = os.path.join(file_dir, 'most_frequent_users.txt')
+# frequent_users_path = file_dir / 'most_frequent_users.txt'
 # print("Saving user count to:", frequent_users_path)
 
 # <<< WRITE CODE BELOW THIS LINE >>>
@@ -146,7 +148,7 @@ Tuna Turner
     that all the names should be capitalized
 """
 
-updated_log_file_path = os.path.join(file_dir, 'updated_users_log.txt')
+updated_log_file_path = file_dir / 'updated_users_log.txt'
 
 # print()
 # print("Saving updated users log to:", updated_log_file_path)
