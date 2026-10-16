@@ -1,6 +1,6 @@
 services:
   exercises:
-    profiles: ["exercises"] # exclude from "docker-compose up"
+    profiles: ["exercises"] # exclude from "docker compose up"
     build: .
     volumes:
       - ./exercises:/app/exercises
