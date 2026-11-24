@@ -101,7 +101,7 @@ Update the code below so that the print statement will display the number of
 unique two-letter patterns at the start of a word in the `words` set.
 
 To do this, replace `pass` in the `for` loop with code that will add all of the
-unqiue two-letter starts of words to the set `two_letter_starts`.
+unique two-letter starts of words to the set `two_letter_starts`.
 
 For example, the start of "whale" is "wh", and the start of "who" is also "wh",
 so these two words would only add the string "wh" to `two_letter_starts`.
